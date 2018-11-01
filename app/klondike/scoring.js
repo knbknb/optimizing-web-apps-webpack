@@ -2,13 +2,14 @@ angular.module("klondike.scoring", [])
   .service("scoring", [function Scoring() {
     "use strict";
 
-    this.score = 0;
+    this.score = 50;
 
     this.newGame = function () {
-      this.score = 0;
+      this.score = 10;
+      0;
     };
     this.tableauCardTurnedUp = function () {
-      this.score += 5;
+      this.score += 2;
     };
     this.dropped = function (source, destionation) {
       this.score += scoreForMoving(source, destionation) || 0;
