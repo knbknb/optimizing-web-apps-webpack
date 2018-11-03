@@ -14,8 +14,9 @@
 
 ## Updates concerning Webpack v4
 
-- Webpack v4 ([based on commit bb4c2d1](https://github.com/webpack/webpack/commit/bb4c2d18f7d62524b15c2b67cceca201832aee28))
-    - **Nothing has fundamentally changed in webpack v4 that obviates what was covered in Course #1.**
+**Nothing has fundamentally changed in webpack v4 that obviates what was covered in Course #1 (webpack v3).**
+    
+- Webpack v4: Links below are based on ([commit bb4c2d1 in master branch](https://github.com/webpack/webpack/commit/bb4c2d18f7d62524b15c2b67cceca201832aee28))
     - CLI extracted to new `webpack-cli` package
         - Just **`npm install webpack-cli` instead of `npm install webpack`**
         - `webpack` package will only provide the API
