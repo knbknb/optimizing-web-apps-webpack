@@ -16,7 +16,7 @@
 
 **Nothing has fundamentally changed in webpack v4 that obviates what was covered in Course #1 (webpack v3).**
 
-Links below are based on commit bb4c2d1 from Sept 2018, in [master branch](https://github.com/webpack/webpack/commit/bb4c2d18f7d62524b15c2b67cceca201832aee28)  (in particular, the line numbers the links are referring to).
+Links below are based on commit bb4c2d1 from Sept 2018, in [master branch](https://github.com/webpack/webpack/tree/bb4c2d18f7d62524b15c2b67cceca201832aee28)  (in particular, the line numbers the links are referring to).
 
 - **Important new features in Webpack v4**:
     - CLI extracted to new [`webpack-cli`](https://github.com/webpack/webpack-cli/) package
