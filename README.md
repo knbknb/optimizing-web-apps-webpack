@@ -2,6 +2,7 @@
 ## Course Details
 
 - [Initial code](https://github.com/g0t4/optimizing-web-apps-webpack/tree/webpack-javascript-start)
+- branches with intermediate results exist
 - [Final code](https://github.com/g0t4/optimizing-web-apps-webpack/tree/webpack-javascript-end)
 
 **Tentative** webpack course series:
@@ -11,13 +12,16 @@
 
 **Tentative means not set in stone.**
 
-- Course #1 uses webpack v3. Tentatively there will be a guide about upgrading from webpack v3 to v4 in Course #2.
+- Course #1 uses webpack v3. See below for v4.
 - Course #2 and #3 will be created after webpack v4 RTM.
+
+**Course contents**
+
 - Course #1 is bundling and transpiling JavaScript.
 - Course #2 is bundling and transpiling/compiling everything else in a front end app: styles, layouts, images, webassembly, etc.
 - Course #3 is then about optimizing the bundles!
 
-## Errata / Updates
+## Updates v4
 
 **Check here for notes about updates to webpack that are related to materials covered in the course series**
 
@@ -35,14 +39,14 @@
         - Intended to be `production` or `development` to optimize accordingly
         - Coarse `mode` maps to new, granular `optimization.*` settings. Most of these are flags to enable/disable a plugin.
             - See `mode` => `optimization.*` mapping in [`WebpackOptionsDefaulter.js`](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsDefaulter.js#L203-L322) (search for `mode`)
-            - See `optimization.*` => plugins mapping in [`WebpackOptionsApply.js`](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsApply.js#L273-L310) (search for `optimization`)
+            - See `optimization.*` => plugins mapping in [`WebpackOptionsApply.js`](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsApply.js#L341-L448) (search for `optimization`)
         - **To use webpack v4 with Course #1 set `mode: "none"`** to disable this new configuration style.
             - All you're doing is turning off some webpack features, notably bundle optimization. Doing this is helpful to learn what is going on under the hood. You can incrementally add back optimizations and look at the bundle impact one at a time.
             - This is likely how I will teach going forward even with v4.
-        - **Most of the optimization plugins won't be covered until Course #3 so this is largely irrelevant.** The following new flags relate to topics covered in Course #1 `if mode == 'development'`:
-            - [`optimization.namedModules` adds NamedModulesPlugin](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsDefaulter.js#L185)
-            - [`devtool` defaults to `eval`](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsDefaulter.js#L22)
-            - [`output.pathinfo` defaults to `true`](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsDefaulter.js#L118)
+        - **Most of the optimization plugins won't be covered until Course #3 (Optimization and Packaging) so this is largely irrelevant.** The following new flags relate to topics covered in Course #1 `if mode == 'development'`:
+            - [`optimization.namedModules` adds NamedModulesPlugin](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsDefaulter.js#L275)
+            - [`devtool` defaults to `eval`](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsDefaulter.js#L36-L40)
+            - [`output.pathinfo` defaults to `make` in development mode](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsDefaulter.js#L154)
         - This new `mode` compliments techniques shown in Course #1's `Dev Isn't Prod` module.
 
 
