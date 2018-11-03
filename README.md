@@ -26,15 +26,15 @@
     - CLI extracted to new `webpack-cli` package
         - Just **`npm install webpack-cli` instead of `npm install webpack`**
         - `webpack` package will only provide the API
-        - See redirection in webpack package's [`bin\webpack.js`](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsDefaulter.js#L59)
+        - See redirection in webpack package's [`bin\webpack.js`](https://github.com/webpack/webpack/blob/master/lib/webpack.js#L59)
     - [`entry` defaults to `./src`](https://github.com/webpack/webpack/bblob/master/lib/WebpackOptionsDefaulter.js#L34)
-    - [`output.path` defaults to absolute path to `./dist`](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsDefaulter.js#L117)
+    - [`output.path` defaults to absolute path to `./dist`](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsDefaulter.js#L152)
     - New, required `mode` config adds common optimization plugins
         - **This is simply a new configuration style!**
         - Matching `--mode` CLI argument
         - Intended to be `production` or `development` to optimize accordingly
         - Coarse `mode` maps to new, granular `optimization.*` settings. Most of these are flags to enable/disable a plugin.
-            - See `mode` => `optimization.*` mapping in [`WebpackOptionsDefaulter.js`](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsDefaulter.js#L158-L200) (search for `mode`)
+            - See `mode` => `optimization.*` mapping in [`WebpackOptionsDefaulter.js`](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsDefaulter.js#L203-L322) (search for `mode`)
             - See `optimization.*` => plugins mapping in [`WebpackOptionsApply.js`](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsApply.js#L273-L310) (search for `optimization`)
         - **To use webpack v4 with Course #1 set `mode: "none"`** to disable this new configuration style.
             - All you're doing is turning off some webpack features, notably bundle optimization. Doing this is helpful to learn what is going on under the hood. You can incrementally add back optimizations and look at the bundle impact one at a time.
