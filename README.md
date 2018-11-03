@@ -20,8 +20,8 @@ Links below are based on [commit bb4c2d1 in master branch](https://github.com/we
 
 - **Important new features in Webpack v4**:
     - CLI extracted to new [`webpack-cli`](https://github.com/webpack/webpack-cli/) package
-        - Just `npm install webpack-cli` instead of `npm install webpack`**
-        - `webpack` package will only provide the API, and optionally [install `webpack-cli`](https://github.com/webpack/webpack/blob/master/lib/webpack.js#L59)
+        - Just `npm install webpack-cli` instead of `npm install webpack`
+        - `webpack` package will only provide the API, and  [optionally install](https://github.com/webpack/webpack/blob/master/bin/webpack.js#L59-L69) `webpack-cli`
     - `webpack.config.js` option [`entry` defaults to `./src`](https://github.com/webpack/webpack/bblob/master/lib/WebpackOptionsDefaulter.js#L34)
     - `webpack.config.js`  option [`output.path` defaults to absolute path to `./dist`](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsDefaulter.js#L152)
     - New, required `mode` config option adds common 'optimization plugins'.
