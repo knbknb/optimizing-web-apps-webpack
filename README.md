@@ -5,27 +5,16 @@
 - branches with intermediate results exist
 - [Final code](https://github.com/g0t4/optimizing-web-apps-webpack/tree/webpack-javascript-end)
 
-**Tentative** webpack course series:
-1. (publishing soon) Webpack: Transpiling and Bundling JavaScript
-2. **(tentative)** *Webpack: Beyond JavaScript*
-3. **(tentative)** *Webpack: Bundle Optimization*
-
-**Tentative means not set in stone.**
-
-- Course #1 uses webpack v3. See below for v4.
-- Course #2 and #3 will be created after webpack v4 RTM.
 
 **Course contents**
 
-- Course #1 is bundling and transpiling JavaScript.
-- Course #2 is bundling and transpiling/compiling everything else in a front end app: styles, layouts, images, webassembly, etc.
-- Course #3 is then about optimizing the bundles!
+- Course #1 (this repo) is bundling and transpiling JavaScript with **Webpack v3**.
+- Course #2 *Webpack: Beyond JavaScript* will be about bundling and transpiling/compiling everything else in a front end app: styles, layouts, images, webassembly, etc.
+- Course #3 *Webpack: Bundle Optimization* will be about optimizing the bundles!
 
-## Updates v4
+## Updates concerning Webpack v4
 
-**Check here for notes about updates to webpack that are related to materials covered in the course series**
-
-- webpack v4 ([based on commit bb4c2d1](https://github.com/webpack/webpack/commit/bb4c2d18f7d62524b15c2b67cceca201832aee28))
+- Webpack v4 ([based on commit bb4c2d1](https://github.com/webpack/webpack/commit/bb4c2d18f7d62524b15c2b67cceca201832aee28))
     - **Nothing has fundamentally changed in webpack v4 that obviates what was covered in Course #1.**
     - CLI extracted to new `webpack-cli` package
         - Just **`npm install webpack-cli` instead of `npm install webpack`**
@@ -33,7 +22,7 @@
         - See redirection in webpack package's [`bin\webpack.js`](https://github.com/webpack/webpack/blob/master/lib/webpack.js#L59)
     - [`entry` defaults to `./src`](https://github.com/webpack/webpack/bblob/master/lib/WebpackOptionsDefaulter.js#L34)
     - [`output.path` defaults to absolute path to `./dist`](https://github.com/webpack/webpack/blob/master/lib/WebpackOptionsDefaulter.js#L152)
-    - New, required `mode` config adds common optimization plugins
+    - New, required `mode` config adds common 'optimization plugins'
         - **This is simply a new configuration style!**
         - Matching `--mode` CLI argument
         - Intended to be `production` or `development` to optimize accordingly
