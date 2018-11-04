@@ -26,7 +26,13 @@ module.exports = (env) => {
             loader: "babel-loader",
             options: {
               presets: [
-                ["@babel/preset-env", { debug: true, modules: false }],
+                ["@babel/preset-env",
+                  {
+                    debug: true,
+                    modules: false,
+                    targets: "> 3%",
+                  },
+                ],
               ],
 
             },
@@ -56,6 +62,7 @@ module.exports = (env) => {
       devServer: {
         hotOnly: true,
         watchContentBase: false,
+        overlay: true, // errors in browser window not console
       },
     });
   }
