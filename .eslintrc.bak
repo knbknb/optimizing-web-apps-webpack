@@ -1,0 +1,17 @@
+{
+  "root": true,
+  "globals": {
+    "angular": false,
+    "_": false
+  },
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-use-before-define": [
+      2,
+      "nofunc"
+    ]
+  }
+}
