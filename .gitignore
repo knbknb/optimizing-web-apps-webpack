@@ -12,3 +12,4 @@ stats.json
 statsgraph-final-ok/
 dist
 app.bundle.js
+statsgraph-full-polyfill/
