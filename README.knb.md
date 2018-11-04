@@ -1,6 +1,6 @@
 ## Extra Commands and Notes
 
-#### Command to generate app.bundle.js with webpack:
+#### Command to generate app.bundle.js with webpack 4:
 
 ```{sh}
 npx webpack-cli --mode=none --output-path=./dist app/app.js -o dist/app.bundle.js --verbose
