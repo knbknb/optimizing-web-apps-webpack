@@ -1,5 +1,5 @@
 //import webpack from '../javascript-development-environment/webpack.config.dev'
-const webpack = require('webpack'); 
+const webpack = require('webpack');
 const path = require('path')
 
 const isDevelopment = process.env.NODE_ENV === 'development'
@@ -8,6 +8,7 @@ console.log(`This is a ${process.env.NODE_ENV} build`);
 module.exports = {
     entry: ['./app/app.js'],
     output:{
+      // must be an absolute path
         path: path.resolve(__dirname, 'app/dist'),
         filename: 'app.bundle.js',
         publicPath: '/dist/'
