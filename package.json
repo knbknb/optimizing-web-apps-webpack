@@ -1,9 +1,7 @@
 {
   "name": "solitaire",
   "private": true,
-  "dependencies": {
-    "webpack-merge": "^4.1.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.37",
     "@babel/core": "^7.0.0-beta.37",
@@ -12,7 +10,9 @@
     "babel-loader": "^8.0.0-beta.0",
     "bower": "^1.8.2",
     "clean-webpack-plugin": "^0.1.17",
-    "eslint": "^5.x",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "http-server": "^0.11.1",
     "jasmine-core": "^2.8.0",
     "karma": "^1.7.1",
@@ -23,22 +23,21 @@
     "nodemon": "^1.14.11",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.0",
+    "webpack-merge": "^4.1.4",
     "webpack-stats-graph": "^1.0.8"
   },
   "scripts": {
-    "build": "webpack  ",
+    "build": "webpack --env.NODE_ENV=production ",
     "watch": "webpack-dev-server  --open --env.NODE_ENV=development",
-
     "build:basic": "webpack app/app.js --verbose --output-filename app.bundle.js",
     "build:json": "webpack app/app.js --json --output-filename app.bundle.js > stats.json",
     "build:statsgraph": "webpack-stats-graph --show-sources --show-size --color-by-size",
-
-    "start": "nodemon -w webpack.config.js -x webpack-dev-server -- --open --env.NODE_ENV=development ",
+    "start": "nodemon -w webpack.config.js -x webpack-dev-server -- --open --env.NODE_ENV=development  ",
+    "start:prod": "nodemon -w webpack.config.js -x webpack-dev-server -- --open --env.NODE_ENV=production  ",
     "start:dev:basic": "webpack-dev-server --config webpack.config.mini.js  ",
     "start:basic": "http-server -c-1 -o",
     "postinstall": "node node_modules/bower/bin/bower install",
     "pretest": "npm install",
-
     "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js --single-run"
   }

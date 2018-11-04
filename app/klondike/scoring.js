@@ -1,12 +1,11 @@
+console.log(process.env.NODE_ENV);
 angular.module("klondike.scoring", [])
   .service("scoring", [function Scoring() {
-    "use strict";
-
     this.score = 50;
 
-    this.newGame = function () {
-      this.score = 20;
-      0;
+
+    this.newGame = () => {
+      this.score = 0;
     };
     this.tableauCardTurnedUp = function () {
       this.score += 2;
