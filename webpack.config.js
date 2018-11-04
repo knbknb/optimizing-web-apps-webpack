@@ -1,5 +1,5 @@
 //import webpack from '../javascript-development-environment/webpack.config.dev'
-const webpack = require('webpack');
+const webpack = require('webpack'); // needed for loading plugins
 const path = require('path')
 
 module.exports = env => {
@@ -15,10 +15,11 @@ module.exports = env => {
           publicPath: '/dist/'
       },
       devServer: {contentBase: [
-          path.resolve(__dirname, 'app')],
+          path.resolve(__dirname, 'app'),
+          path.resolve(__dirname, 'app', 'klondike')],
           publicPath: '/dist/',
-          watchContentBase: true,
-          hot: true
+          watchContentBase: false,
+          hotOnly: true
       },
       plugins: [
           new webpack.NamedModulesPlugin(),

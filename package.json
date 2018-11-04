@@ -26,14 +26,14 @@
     "webpack-stats-graph": "^1.0.8"
   },
   "scripts": {
-    "build": "webpack --env production",
-    "watch": "webpack-dev-server  -w app/app.js app/dist/app.bundle.js ",
+    "build": "webpack  ",
+    "watch": "webpack-dev-server  --open --env.NODE_ENV=development",
 
     "build:basic": "webpack app/app.js --verbose --output-filename app.bundle.js",
     "build:json": "webpack app/app.js --json --output-filename app.bundle.js > stats.json",
     "build:statsgraph": "webpack-stats-graph --show-sources --show-size --color-by-size",
 
-    "start": "nodemon -w webpack.config.js -x webpack-dev-server -- --env.NODE_ENV=development ",
+    "start": "nodemon -w webpack.config.js -x webpack-dev-server -- --open --env.NODE_ENV=development ",
     "start:dev:basic": "webpack-dev-server --config webpack.config.mini.js  ",
     "start:basic": "http-server -c-1 -o",
     "postinstall": "node node_modules/bower/bin/bower install",
