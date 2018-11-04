@@ -24,18 +24,7 @@ module.exports = (env) => {
           exclude: /(node_modules|bower_components)/,
           use: {
             loader: "babel-loader",
-            options: {
-              presets: [
-                ["@babel/preset-env",
-                  {
-                    debug: true,
-                    modules: false,
-                    targets: "> 3%",
-                  },
-                ],
-              ],
-
-            },
+            // options: , // .babelrc.js file will be loaded automatically
           },
         }],
     },
