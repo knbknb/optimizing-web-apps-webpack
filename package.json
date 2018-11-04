@@ -33,7 +33,7 @@
     "build:json": "webpack app/app.js --json --output-filename app.bundle.js > stats.json",
     "build:statsgraph": "webpack-stats-graph --show-sources --show-size --color-by-size",
 
-    "start": "nodemon -w webpack.config.js -x webpack-dev-server -- --env development ",
+    "start": "nodemon -w webpack.config.js -x webpack-dev-server -- --env.NODE_ENV=development ",
     "start:dev:basic": "webpack-dev-server --config webpack.config.mini.js  ",
     "start:basic": "http-server -c-1 -o",
     "postinstall": "node node_modules/bower/bin/bower install",
