@@ -2,6 +2,7 @@
 const webpack = require("webpack"); // needed for loading plugins
 const path = require("path");
 const merge = require("webpack-merge");
+const StatsGraphPlugin = require("./StatsGraphPlugin");
 
 // eslint no-unexpected-unnamed-function: 0
 module.exports = (env) => {
@@ -16,6 +17,22 @@ module.exports = (env) => {
       filename: "app.bundle.js",
       publicPath: "/dist/",
     },
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          exclude: /(node_modules|bower_components)/,
+          use: {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                ["@babel/preset-env", { debug: true, modules: false }],
+              ],
+
+            },
+          },
+        }],
+    },
     devServer: {
       contentBase: [
         path.resolve(__dirname, "app"),
@@ -23,6 +40,7 @@ module.exports = (env) => {
       publicPath: "/dist/",
     },
     plugins: [
+      new StatsGraphPlugin(),
       new webpack.DefinePlugin({
         ENV_IS_DEVELOPMENT: isDevelopment,
         "process.env.NODE_ENV": JSON.stringify(isDevelopment ? "development" : "production"),

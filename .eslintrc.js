@@ -7,7 +7,11 @@ module.exports = {
         "root": true,
         "globals": {
           "angular": false,
-          "_": false
+          "_": false,
+          "process": false,
+          "module": false,
+          "ENV_IS": false,
+          "ENV_IS_DEVELOPMENT": false
         },
         "parserOptions": {
           "ecmaVersion": 7,

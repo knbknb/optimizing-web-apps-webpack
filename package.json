@@ -3,11 +3,11 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.37",
-    "@babel/core": "^7.0.0-beta.37",
-    "@babel/polyfill": "^7.0.0-beta.37",
-    "@babel/preset-env": "^7.0.0-beta.37",
-    "babel-loader": "^8.0.0-beta.0",
+    "@babel/cli": "^7.x",
+    "@babel/core": "^7.x",
+    "@babel/polyfill": "^7.x",
+    "@babel/preset-env": "^7.x",
+    "babel-loader": "^8.x",
     "bower": "^1.8.2",
     "clean-webpack-plugin": "^0.1.17",
     "eslint": "^5.8.0",
@@ -27,7 +27,7 @@
     "webpack-stats-graph": "^1.0.8"
   },
   "scripts": {
-    "build": "webpack --env.NODE_ENV=production ",
+    "build": "webpack --env.NODE_ENV=development ",
     "watch": "webpack-dev-server  --open --env.NODE_ENV=development",
     "build:basic": "webpack app/app.js --verbose --output-filename app.bundle.js",
     "build:json": "webpack app/app.js --json --output-filename app.bundle.js > stats.json",
